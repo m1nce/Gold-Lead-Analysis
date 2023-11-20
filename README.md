@@ -39,11 +39,17 @@ After getting only the needed columns and creating new columns to help with our 
 default.head()
 ```
 |               gameid |   league |   side |   position |   result |  golddiffat10 |  golddiffat15 |   earnedgold |   barons |   positive |   major_league |   is_missing_10 |   baron_missing |
+
 |:---------------------|---------:|-------:|-----------:|---------:|--------------:|--------------:|-------------:|---------:|-----------:|---------------:|----------------:|:----------------|
+
 | ESPORTSTMNT01_2690210|     LCKC |   Blue |        top |    False |          52.0 |         391.0 |       7164.0 |      0.0 |       True |          False |           False |           False |
+
 | ESPORTSTMNT01_2690210|     LCKC |   Blue |        jng |    False |         485.0 |         541.0 |       5368.0 |      0.0 |       True |          False |           False |           False |
+
 | ESPORTSTMNT01_2690210|     LCKC |   Blue |        mid |    False |         162.0 |        -475.0 |       5945.0 |      0.0 |       True |          False |           False |           False |
+
 | ESPORTSTMNT01_2690210|     LCKC |   Blue |        bot |    False |         296.0 |        -793.0 |       6835.0 |      0.0 |       True |          False |           False |           False |
+
 | ESPORTSTMNT01_2690210|     LCKC |   Blue |        sup |    False |         528.0 |         443.0 |       2908.0 |      0.0 |       True |          False |           False |           False |
 
 
