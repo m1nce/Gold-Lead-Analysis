@@ -18,20 +18,20 @@ In addition, we decided to test missingness on the `'baron'` column since data m
 ## Cleaning and EDA
 
 We decided to use 'gameid', `'league'`, `'side'`, `'position'`, `'result'`, `'golddiffat10'`, `'golddiffat15'`, `'earnedgold'`, and `'barons'` as our columns.
--`'gameid'`: unique ID of the game
--`'league'`: leagues in which games take place
--`'side'`: contains red or blue team, each taking different parts of the map.
--`'position'`: predefined role of the player in the game; separated into five roles. (top, jungle, mid, bottom, support)
--`'golddiffat10'`: differential of gold earned between teams during 10 minutes of the game. contains data on each roles' and teams' differential respectively.
--`'golddiffat15'`: similar to `'golddiffat10'`, but at 15 minutes of the game.
--`'earnedgold'`: earned gold throughout the course of the game.
--`'barons'`: number of baron nashors slayed throughout the course of the game.
+* `'gameid'`: unique ID of the game
+* `'league'`: leagues in which games take place
+* `'side'`: contains red or blue team, each taking different parts of the map.
+* `'position'`: predefined role of the player in the game; separated into five roles. (top, jungle, mid, bottom, support)
+* `'golddiffat10'`: differential of gold earned between teams during 10 minutes of the game. contains data on each roles' and teams' differential respectively.
+* `'golddiffat15'`: similar to `'golddiffat10'`, but at 15 minutes of the game.
+* `'earnedgold'`: earned gold throughout the course of the game.
+* `'barons'`: number of baron nashors slayed throughout the course of the game.
 
 Then, we created four new columns - `'positive'`,`'major_league'`, `'is_missing_10'`, and `'baron_missing'` - all filled with boolean values.
--`'positive'`: if `'golddiffat10'` is positive (x>0)
--`'major_league'`: if the game took place in a major league (LCK, LPL, LEC, LCS, PCS, VCS, LJL, CBLOL, LLA)
--`'is_missing_10'`: if `'golddiffat10'` is missing
--`'baron_missing'`: if `'barons'` is missing
+* `'positive'`: if `'golddiffat10'` is positive (x>0)
+* `'major_league'`: if the game took place in a major league (LCK, LPL, LEC, LCS, PCS, VCS, LJL, CBLOL, LLA)
+* `'is_missing_10'`: if `'golddiffat10'` is missing
+* `'baron_missing'`: if `'barons'` is missing
 
 After getting only the needed columns and creating new columns to help with our analysis, we removed rows in the data in which games did not have a result, meaning that the data showed that both teams had lost.
 
@@ -59,9 +59,7 @@ In this bar graph, we can see the different probabilities of winning a match if 
 
 ### Interesting Aggregates
 
-```py
-print(positiontime).markdown(index=False)
-```
+
 
 
 
@@ -98,6 +96,4 @@ Going back to our original question, we wondered if having a gold lead would res
 **Conclusion**: Under the null hypothesis, we can reject the fact that these two groups come from the same distribution. Since our p-value had a value of 0.0 and the significance level was at 0.05, we are able to conclude this.
 
 Our conclusion could be reasonable because having a gold lead at the 10-minute mark can signify a snowball effect. If you are not aware of the snowball effect, think of a snowball rolling down a hill. While the snowball might start small, as it rolls down the hill, it gets much much bigger. Similarly, when a player or a team gains an initial advantage (by first blood, first dragon, herald, higher CS score, etc.) and then leverages that advantage to secure further leads and control over the game. Ultimately, having even a small gold lead at the ten-minute mark can be used to the teams' advantage and can take over the game by being able to get even stronger by forcing favorable team fights, being able to get dragons and dragon souls, or being able to get Baron Nashor. Overall, we believe that this conclusion is very reasonable because having a gold lead at the ten-minute mark can signify who has more control of the game and has a higher potential to win the match.
-
-
 
