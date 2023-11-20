@@ -35,6 +35,10 @@ Then, we created four new columns - `'positive'`,`'major_league'`, `'is_missing_
 
 After getting only the needed columns and creating new columns to help with our analysis, we removed rows in the data in which games did not have a result, meaning that the data showed that both teams had lost.
 
+```py
+default.head()
+
+```
 
 
 ### Univariate Analysis:
@@ -59,6 +63,13 @@ In this bar graph, we can see the different probabilities of winning a match if 
 
 ### Interesting Aggregates
 
+| position | meangolddiffat10 | meangolddiffat15 | diff10to15|
+|:---------|-----------------:|-----------------:|----------:|
+| bot |            179.625176 |        479.168784|299.543607 |
+| mid |            135.716907 |        354.728102|219.011196 |
+| top |            131.171230 |        329.448020|198.276790 |
+| jng |            148.550099 |        342.626117|194.076018 |
+| sup |             95.581522 |        218.877787|123.296265 |
 
 
 
@@ -96,4 +107,3 @@ Going back to our original question, we wondered if having a gold lead would res
 **Conclusion**: Under the null hypothesis, we can reject the fact that these two groups come from the same distribution. Since our p-value had a value of 0.0 and the significance level was at 0.05, we are able to conclude this.
 
 Our conclusion could be reasonable because having a gold lead at the 10-minute mark can signify a snowball effect. If you are not aware of the snowball effect, think of a snowball rolling down a hill. While the snowball might start small, as it rolls down the hill, it gets much much bigger. Similarly, when a player or a team gains an initial advantage (by first blood, first dragon, herald, higher CS score, etc.) and then leverages that advantage to secure further leads and control over the game. Ultimately, having even a small gold lead at the ten-minute mark can be used to the teams' advantage and can take over the game by being able to get even stronger by forcing favorable team fights, being able to get dragons and dragon souls, or being able to get Baron Nashor. Overall, we believe that this conclusion is very reasonable because having a gold lead at the ten-minute mark can signify who has more control of the game and has a higher potential to win the match.
-
