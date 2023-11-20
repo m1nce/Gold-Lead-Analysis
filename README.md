@@ -90,7 +90,6 @@ In addition to some of the data being NMAR, we also have other columns dependent
 
 
 ### Missing Dependency
-### Missing Dependency
 Throughout all of the data, we observed that there were many instances of missing data. We speculated that this missingness depended on the league in which the game took place, as not all leagues were put at the same standard in recording data.
 ### Barons and Leagues
 With permutation tests to determine the relationship, we decided to test the dependency between the missingness of `'barons'` and `'league'`, and the missingness of `'barons'` and nearly every other column in the data.
