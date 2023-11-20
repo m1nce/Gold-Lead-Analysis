@@ -90,8 +90,28 @@ In addition to some of the data being NMAR, we also have other columns dependent
 
 
 ### Missing Dependency
+### Missing Dependency
+Throughout all of the data, we observed that there were many instances of missing data. We speculated that this missingness depended on the league in which the game took place, as not all leagues were put at the same standard in recording data.
+### Barons and Leagues
+With permutation tests to determine the relationship, we decided to test the dependency between the missingness of `'barons'` and `'league'`, and the missingness of `'barons'` and nearly every other column in the data.
 
 
+**Null Hypothesis**: The missingness of barons does not depend on league
+**Alternative Hypothesis**: The missingness of barons depends on league
+We used our previously created column of `'baron_missing'` indicating the missingness status of `'barons'`, and shuffled leagues for our permutation. Since both columns are categorical, we used total variation distance (TVD) between when barons is missing or not as our test statistic.
+<iframe src="assets/mar.html" width=800 height=600 frameBorder=0></iframe>
+
+With a p-value of 0.0, it is evident that `'barons'` is dependent on `'league'`. Thus, `'barons'` is MAR.
+
+### Barons and Binned Game length
+
+**Null Hypothesis**: The missingness of barons does not depend on the length of a game.
+**Alternative Hypothesis**: The missingness of rating depends on the length of a game.
+We attempted to bin every game into a number, depending on how long the game was. Ultimately, we decided to bin the distribution into 10 bins. Then, we shuffled the `'baron_missing'`, just like in the first two missingness assessments.
+<iframe src="assets/mcar.html" width=800 height=600 frameBorder=0></iframe>
+
+
+With a significance level of 0.01, we fail to reject the null hypothesis since the p-value is greater than the significance level. Thus, we can conclude that baron missing is MCAR and does not depend on game length.
 
 ## Hypothesis Testing
 
