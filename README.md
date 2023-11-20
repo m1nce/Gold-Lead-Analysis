@@ -27,7 +27,7 @@ We decided to use 'gameid', `'league'`, `'side'`, `'position'`, `'result'`, `'go
 -`'earnedgold'`: earned gold throughout the course of the game.
 -`'barons'`: number of baron nashors slayed throughout the course of the game.
 
-Then, we created four new columns - `'positive'`,`'major_league'`, `'is_missing_10'`, and 'baron_missing' - all filled with boolean values.
+Then, we created four new columns - `'positive'`,`'major_league'`, `'is_missing_10'`, and `'baron_missing'` - all filled with boolean values.
 -`'positive'`: if `'golddiffat10'` is positive (x>0)
 -`'major_league'`: if the game took place in a major league (LCK, LPL, LEC, LCS, PCS, VCS, LJL, CBLOL, LLA)
 -`'is_missing_10'`: if `'golddiffat10'` is missing
