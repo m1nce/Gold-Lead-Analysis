@@ -59,7 +59,9 @@ In this bar graph, we can see the different probabilities of winning a match if 
 
 ### Interesting Aggregates
 
-print(position time).markdown(index=False)
+```py
+print(positiontime).markdown(index=False)
+```
 
 
 
